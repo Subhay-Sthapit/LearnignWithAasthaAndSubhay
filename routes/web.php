@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LearningController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/learning-form',[LearningController::class,'viewForm'])->name('learning_form');
+Route::get('/view-records',[LearningController::class,'viewRecords'])->name('view_records');
+
